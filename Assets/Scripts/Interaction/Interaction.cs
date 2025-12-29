@@ -4,8 +4,16 @@ using UnityEngine.InputSystem;
 public class Interaction : MonoBehaviour
 {
     [SerializeField] private float rayDistance;
-    [SerializeField] private InputAction interactAction;
-    
+    [SerializeField] private InputActionAsset inputAction;
+    private InputAction interactAction;
+
+    private void Awake()
+    {
+        var playerActionMap = inputAction.FindActionMap("Player");
+        
+        interactAction = playerActionMap.FindAction("Interact");
+    }
+
     private void Update()
     {
         if(Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out var hitInfo, rayDistance ))
