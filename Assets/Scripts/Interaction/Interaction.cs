@@ -18,8 +18,8 @@ public class Interaction : MonoBehaviour
     {
         if(Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out var hitInfo, rayDistance ))
         {
-            if(interactAction.ReadValue<bool>() && hitInfo.collider.gameObject.GetComponent<InteractableComponent>() != null)
-                hitInfo.collider.gameObject.GetComponent<InteractableComponent>();
+            if(interactAction.ReadValue<float>() == 1f && hitInfo.collider.gameObject.GetComponent<InteractableComponent>() != null)
+                hitInfo.collider.gameObject.GetComponent<InteractableComponent>().OnInteract();
         }
     } 
 }

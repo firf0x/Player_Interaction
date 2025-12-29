@@ -269,8 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbe910da11e75347b5205036a550a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 0
-  inputAction: {fileID: 0}
+  rayDistance: 15
+  inputAction: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
