@@ -3,6 +3,12 @@ using UnityEngine.Events;
 
 public class InteractableObject : MonoBehaviour
 {
-    public UnityEvent Event;
+    [SerializeField] private UnityEvent<InteractionStrategy> Event;
+
     
 }
+
+// public interface IObject
+// {
+    
+// }
