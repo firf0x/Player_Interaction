@@ -43,13 +43,4 @@ public class InteractableComponent : MonoBehaviour
         
         OnInteracted?.Invoke();
     }
-
-    void OnDestroy()
-    {
-        foreach (var strategy in interactionStrategies)
-        {
-            if(strategy != null)
-                Destroy(strategy);
-        }
-    }
 }

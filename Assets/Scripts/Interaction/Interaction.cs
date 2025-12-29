@@ -14,12 +14,24 @@ public class Interaction : MonoBehaviour
         interactAction = playerActionMap.FindAction("Interact");
     }
 
+    private void OnEnable()
+    {
+        interactAction.Enable();
+    }
+
+    void OnDisable()
+    {
+        interactAction.Disable();
+    }
+
     private void Update()
     {
         if(Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out var hitInfo, rayDistance ))
         {
-            if(interactAction.ReadValue<float>() == 1f && hitInfo.collider.gameObject.GetComponent<InteractableComponent>() != null)
+            if( interactAction.triggered && hitInfo.collider.gameObject.GetComponent<InteractableComponent>() != null )
+            {
                 hitInfo.collider.gameObject.GetComponent<InteractableComponent>().OnInteract();
+            }
         }
     } 
 }
