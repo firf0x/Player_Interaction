@@ -18,6 +18,8 @@ public class InteractableComponent : MonoBehaviour
             if (strategy != null)
                 strategy.OnHoverEnter();
         }
+
+        OnHoverStarted?.Invoke();
     }
 
     public void OnHoverExit()
@@ -27,6 +29,8 @@ public class InteractableComponent : MonoBehaviour
             if (strategy != null)
                 strategy.OnHoverExit();
         }
+        
+        OnHoverEnded?.Invoke();
     }
 
     public void OnInteract()
@@ -36,5 +40,7 @@ public class InteractableComponent : MonoBehaviour
             if (strategy != null)
                 strategy.OnInteract();
         }
+        
+        OnInteracted?.Invoke();
     }
 }
