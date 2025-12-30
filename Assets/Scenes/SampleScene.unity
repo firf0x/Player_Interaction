@@ -564,7 +564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6187996019452246954, guid: 23c2b03e3ca00a2479d86ad24b87e558, type: 3}
       propertyPath: interactionStrategies.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6187996019452246954, guid: 23c2b03e3ca00a2479d86ad24b87e558, type: 3}
       propertyPath: 'interactionStrategies.Array.data[0]'
@@ -573,7 +573,7 @@ PrefabInstance:
     - target: {fileID: 6187996019452246954, guid: 23c2b03e3ca00a2479d86ad24b87e558, type: 3}
       propertyPath: 'interactionStrategies.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: b44d9d5741a24d94ebfb9052678904ff, type: 2}
+      objectReference: {fileID: 11400000, guid: 978f79dded42a254aa6c52c8734831f3, type: 2}
     - target: {fileID: 8560596624066151563, guid: 23c2b03e3ca00a2479d86ad24b87e558, type: 3}
       propertyPath: m_Name
       value: Item

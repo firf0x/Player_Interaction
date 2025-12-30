@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ColorInteractionStrategy", menuName = "Scriptable Objects/Interaction/Log Strategy")]
+[CreateAssetMenu(fileName = "ColorInteractionStrategy", menuName = "Scriptable Objects/Interaction/ColorInteractionStrategy")]
 public class ColorInteractionStrategy : InteractionStrategy
 {
     [SerializeField] private Color color = Color.black;

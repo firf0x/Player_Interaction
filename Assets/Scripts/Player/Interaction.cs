@@ -30,30 +30,27 @@ public class Interaction : MonoBehaviour
 
     private void Update()
     {
+        InteractableComponent newHoveredObject = null;
+        
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out var hitInfo, rayDistance))
         {
-            InteractableComponent newHoveredObject = hitInfo.collider.gameObject.GetComponent<InteractableComponent>();
-            
-            if (newHoveredObject != null && newHoveredObject != currentHoveredObject)
-            {
-                if (currentHoveredObject != null)
-                {
-                    currentHoveredObject.OnHoverExit();
-                }
-                
-                currentHoveredObject = newHoveredObject;
-                currentHoveredObject.OnHoverEnter();
-            }
+            newHoveredObject = hitInfo.collider.gameObject.GetComponent<InteractableComponent>();
         }
-        else
+        
+        if (newHoveredObject != currentHoveredObject)
         {
             if (currentHoveredObject != null)
             {
                 currentHoveredObject.OnHoverExit();
-                currentHoveredObject = null;
+            }
+            
+            currentHoveredObject = newHoveredObject;
+            if (currentHoveredObject != null)
+            {
+                currentHoveredObject.OnHoverEnter();
             }
         }
-
+        
         if (interactAction.triggered && currentHoveredObject != null)
         {
             currentHoveredObject.OnInteract();
