@@ -2,18 +2,18 @@ using UnityEngine;
 
 public abstract class InteractionStrategy : ScriptableObject, IInteraction
 {
-    public virtual void OnHoverEnter() { }
+    public virtual void OnHoverEnter( GameObject gameObject ) { }
 
-    public virtual void OnHoverExit() { }
+    public virtual void OnHoverExit( GameObject gameObject ) { }
 
     public abstract void OnInteract();
 }
 
 public interface IInteraction
 {
-    public virtual void OnHoverEnter() { }
+    public void OnHoverEnter( GameObject gameObject );
 
-    public virtual void OnHoverExit() { }
+    public void OnHoverExit( GameObject gameObject );
 
-    public abstract void OnInteract();
+    public void OnInteract();
 }

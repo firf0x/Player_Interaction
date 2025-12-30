@@ -1,22 +1,22 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractableComponent : MonoBehaviour
 {
     [SerializeField] private List<InteractionStrategy> interactionStrategies;
-    [SerializeField] private Renderer objectRenderer;
 
-    public event Action OnHoverStarted;
-    public event Action OnHoverEnded;
-    public event Action OnInteracted;
+    public UnityEvent OnHoverStarted;
+    public UnityEvent OnHoverEnded;
+    public UnityEvent OnInteracted;
 
     public void OnHoverEnter()
     {
         foreach (var strategy in interactionStrategies)
         {
             if (strategy != null)
-                strategy.OnHoverEnter();
+                strategy.OnHoverEnter(gameObject);
         }
 
         OnHoverStarted?.Invoke();
@@ -27,7 +27,7 @@ public class InteractableComponent : MonoBehaviour
         foreach (var strategy in interactionStrategies)
         {
             if (strategy != null)
-                strategy.OnHoverExit();
+                strategy.OnHoverExit(gameObject);
         }
         
         OnHoverEnded?.Invoke();
