@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InteractableComponent : MonoBehaviour
+public class InteractionComponent : MonoBehaviour
 {
     [SerializeField] private List<InteractionStrategy> interactionStrategies;
 

@@ -1239,6 +1239,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1b094c32195509d43949a1b67c93d58f, type: 3}
   m_PrefabInstance: {fileID: 223693140}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &230123426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
+  m_PrefabInstance: {fileID: 450144720}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a61b41c5784664abb677c81eacef58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &232522272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6280,6 +6291,34 @@ PrefabInstance:
       propertyPath: 'interactionStrategies.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 978f79dded42a254aa6c52c8734831f3, type: 2}
+    - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
+      propertyPath: OnInteracted.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
+      propertyPath: OnInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
+      propertyPath: OnInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 230123426}
+    - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
+      propertyPath: OnInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
+      propertyPath: OnInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnInteract
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
+      propertyPath: OnInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InteractionComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
+      propertyPath: OnInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7483153029512344831, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
       propertyPath: m_Name
       value: Crate (2)
@@ -10314,6 +10353,6 @@ SceneRoots:
   - {fileID: 1564927925}
   - {fileID: 163389488}
   - {fileID: 1852383476}
-  - {fileID: 450144720}
   - {fileID: 347029522}
+  - {fileID: 450144720}
   - {fileID: 1418664264}

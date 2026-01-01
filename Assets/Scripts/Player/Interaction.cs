@@ -8,7 +8,7 @@ public class Interaction : MonoBehaviour
     
     private InputAction interactAction;
     private Camera playerCamera;
-    private InteractableComponent currentHoveredObject;
+    private InteractionComponent currentHoveredObject;
 
     private void Awake()
     {
@@ -30,21 +30,22 @@ public class Interaction : MonoBehaviour
 
     private void Update()
     {
-        InteractableComponent newHoveredObject = null;
+        InteractionComponent newHoverObject = null;
         
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out var hitInfo, rayDistance))
         {
-            newHoveredObject = hitInfo.collider.gameObject.GetComponent<InteractableComponent>();
+            newHoverObject = hitInfo.collider.gameObject.GetComponent<InteractionComponent>();
         }
         
-        if (newHoveredObject != currentHoveredObject)
+        if (newHoverObject != currentHoveredObject)
         {
             if (currentHoveredObject != null)
             {
                 currentHoveredObject.OnHoverExit();
             }
             
-            currentHoveredObject = newHoveredObject;
+            currentHoveredObject = newHoverObject;
+            
             if (currentHoveredObject != null)
             {
                 currentHoveredObject.OnHoverEnter();
