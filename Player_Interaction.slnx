@@ -1,7 +1,3 @@
 ﻿<Solution>
-<<<<<<< HEAD
-=======
-  <Project Path="Assembly-CSharp-Editor.csproj" />
->>>>>>> parent of 210a1f3 (Удаление папок юнити)
   <Project Path="Assembly-CSharp.csproj" />
 </Solution>

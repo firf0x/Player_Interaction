@@ -904,7 +904,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 163389488}
-  - component: {fileID: 163389487}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -912,18 +911,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!156049354 &163389487
-Grid:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163389486}
-  m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
-  m_CellGap: {x: 0, y: 0, z: 0}
-  m_CellLayout: 0
-  m_CellSwizzle: 1
 --- !u!4 &163389488
 Transform:
   m_ObjectHideFlags: 0
@@ -1753,12 +1740,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
       propertyPath: interactionStrategies.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
       propertyPath: 'interactionStrategies.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: b44d9d5741a24d94ebfb9052678904ff, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 7483153029512344831, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
       propertyPath: m_Name
       value: Crate (1)
@@ -2044,12 +2031,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
       propertyPath: interactionStrategies.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
       propertyPath: 'interactionStrategies.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4fe7b3d91e1916148b61faffbbe0d77e, type: 2}
+      objectReference: {fileID: 11400000, guid: 978f79dded42a254aa6c52c8734831f3, type: 2}
+    - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
+      propertyPath: 'interactionStrategies.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b44d9d5741a24d94ebfb9052678904ff, type: 2}
     - target: {fileID: 7483153029512344831, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
       propertyPath: m_Name
       value: Crate
@@ -6284,14 +6275,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
-      propertyPath: interactionStrategies.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
-      propertyPath: 'interactionStrategies.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 978f79dded42a254aa6c52c8734831f3, type: 2}
-    - target: {fileID: 3066378219572168506, guid: e4fec3f3e8ac0fc42a07485f00db6821, type: 3}
       propertyPath: OnInteracted.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -6455,8 +6438,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1453175040}
-  - component: {fileID: 1453175042}
-  - component: {fileID: 1453175041}
   m_Layer: 0
   m_Name: map
   m_TagString: Untagged
@@ -6480,96 +6461,6 @@ Transform:
   - {fileID: 1097528805}
   m_Father: {fileID: 163389488}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!483693784 &1453175041
-TilemapRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453175039}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
-  m_MaxChunkCount: 16
-  m_MaxFrameAge: 16
-  m_SortOrder: 0
-  m_Mode: 0
-  m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 0
---- !u!1839735485 &1453175042
-Tilemap:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453175039}
-  m_Enabled: 1
-  m_Tiles: {}
-  m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
-  m_TileObjectToInstantiateArray: []
-  m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
-  m_TileOrientation: 0
-  m_TileOrientationMatrix:
-    e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
 --- !u!1001 &1464995535
 PrefabInstance:
   m_ObjectHideFlags: 0
